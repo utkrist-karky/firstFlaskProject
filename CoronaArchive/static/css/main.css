@@ -1,0 +1,135 @@
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+head{
+    text-align: center;
+}
+.toast{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(13, 153, 95);
+    border-radius: 15px;
+    padding: 25px 10px;
+    box-shadow: 0 0 15px rgb(80, 79, 79);
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(48, 46, 46);
+    color: white;
+    /* padding-top: 25vh; */
+}
+.container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(22, 21, 21);
+    border-radius: 15px;
+    padding: 25px 10px;
+    box-shadow: 0 0 15px rgb(80, 79, 79);
+}
+.mainContainer{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(22, 21, 21);
+    border-radius: 15px;
+    padding: 25px 10px;
+    box-shadow: 0 0 15px rgb(80, 79, 79);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    
+}
+input{
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 5px ;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(48, 46, 46);
+
+}
+.btns{
+    margin: 15px auto;
+}
+button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px 25px;
+}
+button:hover{
+    background-color: tomato;
+}
+
+.customButton{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px 25px;
+}
+.customButton:hover{
+    background-color: tomato;
+}
+
+.dropbtn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px 25px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(80, 79, 79);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color:  white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: tomato;
+    border-radius: 10px;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: tomato;}

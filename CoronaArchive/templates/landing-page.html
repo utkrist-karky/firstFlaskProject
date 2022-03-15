@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<style>body{padding-top: 25vh;}</style>
+<div class="container">
+    <h2>Login</h2>
+    <form method = "post" action="">
+        {{form.hidden_tag()}}
+        {{form.email(class = input,placeholder = "Email")}}
+        {{form.password(class = input,placeholder = "Password")}}
+        <div class ="btns">
+            {{form.SubmitField(class = "customButton")}}
+            <div class="dropdown">
+                <button class="dropbtn">Signup</button>
+                <div class="dropdown-content">
+                <a href="signup">User</a>
+                <a href="signup-places">Place</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </form>
+</div>
+
+{% endblock %}

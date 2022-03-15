@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2>Signup</h2>
+    <form method = "post" action="">
+        {{form.hidden_tag()}}
+        {{form.name(class = input,placeholder = "Name")}}
+        {{form.address(class = input,placeholder = "Adress")}}
+        {{form.phone_number(class = input,placeholder = "Phone Number")}}
+        {{form.email(class = input,placeholder = "Email")}}
+        {{form.password(class = input,placeholder = "Password")}}
+        {{form.confirmPassword(class = input,placeholder = "Confirm Password")}}
+        {{form.SubmitField(class = "customButton")}}
+      
+    </form>
+</div>
+
+
+
+{% endblock %}
