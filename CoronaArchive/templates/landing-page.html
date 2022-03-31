@@ -1,31 +1,43 @@
 {% extends 'base.html' %}
 
-{% block head %}
+{% block body%}
 
-{% endblock %}
 
-{% block body %}
+<br>
+<div>
 
-<style>body{padding-top: 25vh;}</style>
-<div class="container">
-    <h2>Login</h2>
-    <form method = "post" action="">
-        {{form.hidden_tag()}}
-        {{form.email(class = input,placeholder = "Email")}}
-        {{form.password(class = input,placeholder = "Password")}}
-        <div class ="btns">
-            {{form.SubmitField(class = "customButton")}}
-            <div class="dropdown">
-                <button class="dropbtn">Signup</button>
-                <div class="dropdown-content">
-                <a href="signup">User</a>
-                <a href="signup-places">Place</a>
+    <div class="row justify-content-center">
+        <div class="col-sm-4 bg-light text-dark">
+            <div class="card-body text-center">
+                
+            
+                <h5 class="card-title">New Here?</h5>
+                <p>Create an account</p>
+                <a href=" {{ url_for('signup_landing') }}" class="btn btn-primary">Signup </a>
                 </div>
-            </div>
         </div>
-        
-        
-    </form>
-</div>
+    </div>
+<br> 
 
-{% endblock %}
+<div class="row justify-content-center">
+    <div class="col-sm-4 bg-light text-dark">
+        <div class="card-body text-center">
+            <h5 class="card-title">Already have an account?</h5>
+                <p>Log in</p>
+            <form method = "post" action="">
+                {{form.hidden_tag()}}
+                {{form.email(class = input,placeholder = "Email")}}
+                {{form.password(class = input,placeholder = "Password")}}
+                <div class ="btns">
+                    {{form.SubmitField(class = "btn btn-primary")}}
+                </div>
+                
+                
+            </form>
+            
+            </div>
+    </div>
+
+
+
+{% endblock%}

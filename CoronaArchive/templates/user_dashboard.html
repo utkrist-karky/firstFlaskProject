@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="mainContainer">
+    
+    <table class="table">
+        <tr>
+          <th>Establishment</th>
+          <th>Establishment-Phone</th>
+          <th>Check-In Time</th>
+          <th>Checkout Time</th>
+        </tr>
+        {%for visit in visits%}
+        {%if visit.user.email == current_user.email%}
+        <tr>
+          <td>{{visit.place.name}}</td>
+          <td>{{visit.place.phoneNumber}}</td>
+          <td>{{visit.entryTime}}</td>
+          <td>{{visit.exitTime}}</td>
+        </tr>
+        {%endif%}
+        {%endfor%}
+      </table>
+</div>
+
+{% endblock %}

@@ -9,17 +9,14 @@
 
 <div class="mainContainer">
     
-    <h2>Welcome User</h2>
+    <h2>Hello, {{current_user.name}}</h2>
+    {%if current_user.infected%}
+    <h5>You are Infected</h5>
+    {%else%}
+    <h5>You are not Infected</h5>
+    {%endif%}
     <div class ="btns">
-        <a href="*"><button type="button" id="sign-up">Scan QR code</button></a>
-        <div class="dropdown">
-            <button class="dropbtn">Other</button>
-            <div class="dropdown-content">
-            <a href="*">A1</a>
-            <a href="*">A2</a>
-            </div>
-        </div>
-        <a href="/"><button type="button" id="sign-up">Logout</button></a>
+        <a href="scan_qr"><button type="button" id="sign-up">ScanQR Code</button></a>
     </div>
 </div>
 

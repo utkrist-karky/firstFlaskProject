@@ -9,18 +9,12 @@
 
 <div class="mainContainer">
     
-    <h2>Welcome Place</h2>
-    <div class ="btns">
-        <a href="*"><button type="button" id="sign-up">Generate QR Code</button></a>
-        <div class="dropdown">
-            <button class="dropbtn">Other</button>
-            <div class="dropdown-content">
-            <a href="*">A1</a>
-            <a href="*">A2</a>
-            </div>
-        </div>
-        <a href="logout"><button type="button" id="sign-up">Logout</button></a>
-    </div>
+    <h2>Hello, {{current_user.name}}</h2>
+    <a href="#" download="qrcode.jpg">
+        <img src="{{  qrcode(current_user.placeEmail) }}" >
+    </a>
+    <p></p>
+    <h5 class="card-title">Click image to download</h5>
 </div>
 
 {% endblock %}

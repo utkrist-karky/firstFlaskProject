@@ -1,6 +1,6 @@
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, EqualTo, ValidationError 
 from CoronaArchive.models import *
 class UserRegistrationForm(FlaskForm):
@@ -58,3 +58,12 @@ class Login(FlaskForm):
     email = StringField('Email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     SubmitField = SubmitField('Login')
+    
+class ScanQRCodeForm(FlaskForm):
+    placeEmail = StringField('Place Email', validators=[DataRequired()])
+    SubmitField = SubmitField('Start')
+    
+class infectUser(FlaskForm):
+    userEmail = StringField('User Email', validators=[DataRequired()])
+    status = BooleanField('Positive')
+    SubmitField = SubmitField('Submit')

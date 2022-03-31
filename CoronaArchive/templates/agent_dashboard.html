@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="mainContainer">
+    
+    <table class="table">
+        <tr>
+          <th>User</th>
+          <th>User-Phone</th>
+          <th>User-status</th>
+          <th>Establishment</th>
+          <th>Establishment-Phone</th>
+          <th>Check-In Time</th>
+          <th>Checkout Time</th>
+        </tr>
+        {%for visit in visits%}
+        <tr>
+          <td>{{visit.user.name}}</td>
+          <td>{{visit.user.phoneNumber}}</td>
+          <td>{{visit.user.infected}}</td>
+          <td>{{visit.place.name}}</td>
+          <td>{{visit.place.phoneNumber}}</td>
+          <td>{{visit.entryTime}}</td>
+          <td>{{visit.exitTime}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+</div>
+
+{% endblock %}
